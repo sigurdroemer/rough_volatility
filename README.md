@@ -47,7 +47,7 @@ The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Cxi_0%3A%5Cmathbb%7BR%7D_%26plus%3B%26space%3B%5Crightarrow%26space%3B%5Cmathbb%7BR%7D_%26plus%3B%2C%26space%3B%26space%3B%5Czeta%2C%26space%3B%5Clambda%26space%3B%5Cin%26space%3B%5Cmathbb%7BR%7D%2C%26space%3B%5Calpha%2C%26space%3B%5Cbeta%26space%3B%5Cin%26space%3B%28-1%2F2%2C0%29%2C%26space%3B%5C%5C%5Cphantom%7Bxxx%7DdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%3D%26space%3B%5Crho%26space%3Bdt%2C%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D.)
 
-In the code, we use the following reparameterisation:
+In the code, we use the reparameterisation:
 
 ![](https://latex.codecogs.com/svg.image?\rho&space;=&space;\frac{\zeta}{\sqrt{\zeta^2&space;&plus;&space;\lambda^2}},&space;\phantom{xx}&space;\eta&space;=&space;\sqrt{\zeta^2&space;&plus;&space;\lambda^2}.)
 
