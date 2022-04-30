@@ -3,7 +3,7 @@ This project implements the pricing models that is used in part one of the analy
 
 We start by outlining the models: Let S(t) denote the time t price of an asset and let r(t) and q(t) denote the risk-free interest rate and the continuously compounded dividend yield respectively; r(t) and q(t) are assumed deterministic. Under some standard assumptions we then have 
 
-![dS_eqn](https://latex.codecogs.com/svg.image?dS_t&space;=&space;S_t(r(t)-q(t))dt&space;&plus;&space;S_t&space;\sqrt{V_t}dW_{2,t})
+![dS_eqn](https://latex.codecogs.com/svg.image?dS_t%26space%3B%3D%26space%3BS_t%28r%28t%29-q%28t%29%29dt%26space%3B%26plus%3B%26space%3BS_t%26space%3B%5Csqrt%7BV_t%7DdW_%7B2%2Ct%7D)
 
 under the risk-neutral measure. Here V(t) is some process (the instantaneous variance) and we write W for Brownian motions.
 
