@@ -77,7 +77,7 @@ The networks are also highly accurate as exemplified with the rough Bergomi mode
 
 The parameters are: 
 
-![](http://www.sciweavers.org/tex2img.php?eq=H%20%3D%200.1%2C%20%5Ceta%20%3D%202.1%2C%20%5Crho%20%3D%20-0.9%2C%20%5Cxi_0%28t%29%20%3D%200.15%5E2.H%20%3D%200.1%2C%20%5Ceta%20%3D%202.1%2C%20%5Crho%20%3D%20-0.9%2C%20%5Cxi_0%28t%29%20%3D%200.15%5E2.H%20%3D%200.1%2C%20%5Ceta%20%3D%202.1%2C%20%5Crho%20%3D%20-0.9%2C%20%5Cxi_0%28t%29%20%3D%200.15%5E2.&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![](https://latex.codecogs.com/svg.image?H&space;=&space;0.1,&space;\phantom{x}\eta&space;=&space;2.1,&space;\phantom{x}\rho&space;=&space;-0.9,&space;\phantom{x}\xi_0(t)&space;=&space;0.15^2.)
 
 A more detailed analysis of the approximation error can be found in the paper.
 
