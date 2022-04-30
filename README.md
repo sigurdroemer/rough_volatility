@@ -36,7 +36,7 @@ The rough Bergomi model of [4] assumes
 
 where
 
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/image3.png)
+![](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\eta&space;\geq&space;0,&space;H&space;\in&space;(0,1/2),&space;dW_{1,t}dW_{2,t}&space;=&space;\rho&space;dt,&space;\rho&space;\in&space;[-1,1].)
 
 ### Extended rough Bergomi
 The extended rough Bergomi model assumes
