@@ -84,9 +84,9 @@ There are a number of scripts to help get you started. They are explained below.
 
 | Language        | Folder        | Description  |
 | :--------------- |:-------------| :------------|
-| Matlab          | .../get_started/neural_networks_in_matlab      | Examples of using the neural nets in Matlab. |
-| Python          | .../get_started/neural_networks_in_python      | Examples of using the neural nets in Python. |
-| R               | .../get_started/neural_networks_in_R           | Examples of using the neural nets in R.|
+| Matlab          | .../get_started/neural_networks_in_matlab      | Examples of using the neural networks in Matlab. |
+| Python          | .../get_started/neural_networks_in_python      | Examples of using the neural networks in Python. |
+| R               | .../get_started/neural_networks_in_R           | Examples of using the neural networks in R.|
 | Matlab          | .../get_started/models_in_matlab | Examples of using the underlying pricing models in Matlab. |
 
 Remarks: 
@@ -105,4 +105,4 @@ The following external packages and libraries are included in the project:
 - Adi Navve (2020). Pack & Unpack variables to & from structures with enhanced functionality (https://www.mathworks.com/matlabcentral/fileexchange/31532-pack-unpack-variables-to-from-structures-with-enhanced-functionality), MATLAB Central File Exchange. Retrieved March 16, 2020.
 
 ## Other remarks:
-- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of y. 
+- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the HybridScheme file of this project. The two implementations are equivalent up to round-off error but that of the current project easier to read.
