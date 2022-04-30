@@ -1,0 +1,209 @@
+%% Clear workspace and load code:
+clear;
+project_folder = fileparts(fileparts(fileparts(matlab.desktop.editor.getActiveFilename)));
+addpath(genpath(project_folder));
+
+%% Load the rough Heston neural network(s):
+[model, Txi] = LoadrHestonNeuralNetwork(project_folder);
+
+% Inspect the model object:
+model
+
+% Note that the rough Heston neural network takes points of the (initial) forward variance
+% curve as input. The vector below shows the maturities of the input forward variances:
+Txi
+
+%% Plot the contract grid:
+figure;
+scatter(model.T,model.k,'.');
+xlabel('Expiration');ylabel('Log-moneyness');
+title('Contract grid');
+
+%% Plot an example:
+% Define the contracts:
+k_obs = model.k;
+T_obs = model.T;
+cartProd = false;
+
+% Choose the model parameters:
+H = 0.1;
+nu = 0.3;
+rho = -0.65;
+xi = repmat(0.15.^2,28,1);
+par = [H;nu;rho;xi];
+
+% Get (v0,theta) from the forward variances:
+v0 = xi(1);
+thetaVals = GetThetaFromXi(v0,H,Txi(2:end),xi(2:end));
+theta = CurveClass('gridpoints',Txi(2:end),'values',thetaVals);
+
+% Check if non-negativity requirement is satisfied:
+CheckNonNegReqTheta(v0,H,theta.gridpoints,theta.values)
+
+% Evaluate the neural network:
+tic;
+[iv, k_obs, T_obs] = model.Eval(par,k_obs,T_obs,cartProd);
+toc;
+
+% Compute actual prices:
+model_true = rHestonClass('v0',v0,'H',H,'rho',rho,'nu',nu,'theta',theta);
+iv_true = model_true.GetPrices(k_obs,T_obs,false,'priceType','implied_volatility');
+
+% Plot:
+uniqT = unique(T_obs);
+idxPlot = [9,22,39,64];
+figure;
+for i=1:size(idxPlot,2)
+    subplot(2,2,i);
+    idx = T_obs == uniqT(idxPlot(i));
+    plot(k_obs(idx),iv_true(idx),'-','Color','blue','DisplayName','Actual','LineWidth',2);hold on;
+    plot(k_obs(idx),iv(idx),'--','Color','red','DisplayName','Neural network','LineWidth',2);
+    xlabel('Log-moneyness');
+    ylabel('Implied volatility');
+    title(['T = ',num2str(uniqT(idxPlot(i)))]);
+    legend()
+end
+
+%% Load and filter example contracts:
+% Load example contracts:
+tmp = importdata([project_folder,'\get_started\example_contracts.txt']);
+k_orig = tmp(:,1);
+T_orig = tmp(:,2);
+
+figure;
+plot(T_orig,k_orig,'.');
+title('Observed contracts'); 
+xlabel('Expiry');
+ylabel('Log-moneyness');
+hold on;
+
+% Filter contracts:
+[k_obs,T_obs] = model.FilterContracts(k_orig,T_orig,false);
+plot(T_obs,k_obs,'.');
+legend('Original observed contracts','Those within the supported domain.');
+
+%% How to speed up (repeated) evaluation:
+% When repeatedly computing prices over the same contracts (although over
+% possibly different model parameters) it is possible to perform a number
+% of pre-computations to speed things up. This is very useful when
+% calibrating. We illustrate this below.
+
+nRuns = 1000;
+
+% Without pre-computations:
+tic
+for i=1:nRuns
+    iv = model.Eval(par,k_obs,T_obs,false,[]);
+end
+toc;
+
+% With pre-computations:
+% Important remark: Contracts must be sorted appropriately 
+% first, see also the description of the PerformPrecomputations 
+% method of the NeuralNetworkPricingModel class:
+tmp = sortrows([T_obs,k_obs]);
+T_obs = tmp(:,1);
+k_obs = tmp(:,2);
+preCompInfo = model.PerformPrecomputations(k_obs,T_obs);
+tic
+for i=1:nRuns
+    iv = model.Eval(par,k_obs,T_obs,false,preCompInfo);
+end
+toc;
+
+% It is also possible to skip a number of validation checks and 
+% computations in the evaluation function if you can ensure certain 
+% assumptions on the inputs are met, e.g. contracts should be sorted 
+% etc. One should use this option with care - please read the 
+% description for the Eval method of the NeuralNetworkPricingModel 
+% class for the exact assumptions on the inputs.
+
+%Example:
+skipChecks = true;
+tmp = sortrows([T_obs,k_obs]);
+T_obs = tmp(:,1);
+k_obs = tmp(:,2);
+
+% With pre-computations and without checks:
+tic
+for i=1:nRuns
+    iv = model.Eval(par,k_obs,T_obs,false,preCompInfo,skipChecks);
+end
+toc;
+
+%% Calibration example:
+% Set parameters:
+H = 0.1;
+nu = 0.2;
+rho = -0.65;
+xi = repmat(0.15^2,28,1);
+par_true = [H;nu;rho;xi];
+
+% Filter contracts to the neural network domain:
+[k_obs,T_obs] = model.FilterContracts(k_orig,T_orig,false);
+
+% Sort contracts:
+tmp = sortrows([T_obs,k_obs]);
+T_obs = tmp(:,1);
+k_obs = tmp(:,2);
+
+% Perform pre-computations (on sorted contracts):
+preCompInfo = model.PerformPrecomputations(k_obs,T_obs);
+
+% Generate synthetic 'observed' prices:
+iv_obs = model.Eval(par_true,k_obs,T_obs,false,preCompInfo);
+
+% Set optimizer settings:
+options = optimoptions('fmincon','Algorithm','interior-point',...
+'MaxFunctionEvaluations',10^4,'MaxIterations',10^4,'FunctionTolerance',10^(-12),...
+'StepTolerance',10^(-4),'FiniteDifferenceStepSize',10^(-4),'Display','off');
+
+% Merge sections of the forward variance curve:
+uniqT = unique(T_obs);
+grpPart = MergeForwardVarianceParameters(Txi,uniqT).';
+idxConvParToNN = [1,2,3,grpPart + 3];
+
+% Set the initial guess:
+x0 = [0.2,0.6,-0.8,ones(1,max(grpPart))*0.3.^2].';
+
+% Define the error function ('lsqnonlin' automatically squares and sums the result):
+err = @(x)(sum((iv_obs - model.Eval(x(idxConvParToNN),k_obs,T_obs,false,preCompInfo,true)).^2));
+
+% Set parameter bounds:
+lb = accumarray(idxConvParToNN',model.lb,[],@max);
+ub = accumarray(idxConvParToNN',model.ub,[],@min);
+
+% Non-negativity constraint:
+nonlcon = @(x)(rHestonNonNegReq(x(idxConvParToNN),Txi));
+
+% Run optimizer:
+tic;
+[xOpt,~,exitflag] = fmincon(err,x0,[],[],[],[],lb,ub,nonlcon,options);
+toc;
+
+par_opt = xOpt(idxConvParToNN);
+
+% Compare true and calibrated parameters:
+[par_true, par_opt]
+
+% One way to force a smoother forward variance curve is to penalize its erraticness
+% in the objective function. We haven't done that in the above.
+
+%% Illustrate fit:
+% Pick an expiry:
+T_plot = uniqT(10);
+
+% Plot:
+idx = T_obs == T_plot;
+figure;
+plot(k_obs(idx),iv_obs(idx),'x','DisplayName','Observed');
+hold on;
+dk = (max(k_obs(idx)) - min(k_obs(idx)))/100;
+k_eval = (min(k_obs(idx)):dk:max(k_obs(idx)))';
+iv_fit = model.Eval(par_opt,k_eval,T_plot);
+plot(k_obs(idx),iv_obs(idx),'-','DisplayName','Calibrated model');
+xlabel('Log-moneyness');ylabel('Implied volatility');
+title(['Calibration fit (T = ', num2str(T_plot) ')']);
+legend();
+
+

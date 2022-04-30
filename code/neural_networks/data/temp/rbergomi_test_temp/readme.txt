@@ -1,0 +1,1 @@
+Folder is used to temporarily store price data.
