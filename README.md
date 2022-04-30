@@ -32,7 +32,7 @@ We consider also a rough Heston model akin to [3] defined by
 ### Rough Bergomi
 The rough Bergomi model of [4] assumes
 
-![rBergomi](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/rbergomi_2.png)
+![rBergomi](https://latex.codecogs.com/svg.image?V_t&space;=&space;\xi_0(t)\exp&space;\left(&space;&space;\eta&space;\sqrt{2H}&space;\int_0^t&space;(t-s)^{H-\frac{1}{2}}dW_{1,s}&space;-&space;\frac{\eta^2}{2}&space;t^{2H}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
 where
 
