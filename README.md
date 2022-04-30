@@ -45,7 +45,9 @@ The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
-As is done in the code, it is natural to reparameterise as below:
+![rBergomiExt](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;&space;\zeta,&space;\lambda&space;\in&space;\mathbb{R},&space;\alpha,&space;\beta&space;\in&space;(-1/2,0),&space;\\\phantom{xxx}dW_{1,t}dW_{2,t}&space;=&space;\rho&space;dt,&space;\rho&space;\in&space;[-1,1].)
+
+In the code, we use the following reparameterisation:
 
 ![](https://latex.codecogs.com/svg.image?\rho&space;=&space;\frac{\zeta}{\sqrt{\zeta^2&space;&plus;&space;\lambda^2}},&space;\phantom{xx}&space;\eta&space;=&space;\sqrt{\zeta^2&space;&plus;&space;\lambda^2}.)
 
