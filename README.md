@@ -105,4 +105,4 @@ The following external packages and libraries are included in the project:
 - Adi Navve (2020). Pack & Unpack variables to & from structures with enhanced functionality (https://www.mathworks.com/matlabcentral/fileexchange/31532-pack-unpack-variables-to-from-structures-with-enhanced-functionality), MATLAB Central File Exchange. Retrieved March 16, 2020.
 
 ## Other remarks:
-- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the HybridScheme file of this project. The two implementations are equivalent up to round-off error but that of the current project easier to read.
+- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the HybridScheme.m file of this project. The two implementations are equivalent up to round-off error but that of the current project is easier to read.
