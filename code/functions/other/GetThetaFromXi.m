@@ -11,7 +11,7 @@ function theta = GetThetaFromXi(v0,H,t,xi)
 % ensure that t -> (t,xi(t)) goes through the points (t(i),xi(t(i)), i=1,2,...,n.
 %
 % Parameters:
-% 	v0:		[1x1 real] Instantaneous variance.
+%   v0:	    [1x1 real] Instantaneous variance.
 %   H:      [1x1 real] Hurst exponent.
 %   t:      [nx1 real] Time points t(1),t(2),...,t(n).
 %   xi:     [nx1 real] Forward variances at the maturities t(1),t(2),...,t(n).
