@@ -40,13 +40,14 @@ The rough Bergomi model of [4] assumes
 The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?V_t&space;=&space;\xi_0(t)V_{1,t}V_{2,t})
-![rBergomiExt](https://latex.codecogs.com/svg.image?V_{1,t}&space;=&space;\exp&space;\left(\zeta&space;\sqrt{2&space;\alpha&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\alpha}&space;dW_{2,s}&space;-&space;\frac{\zeta^2}{2}t^{2&space;\alpha&space;&plus;&space;1}&space;\right))
-![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_{1,t}&space;=&space;\exp&space;\left(\zeta&space;\sqrt{2&space;\alpha&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\alpha}&space;dW_{2,s}&space;-&space;\frac{\zeta^2}{2}t^{2&space;\alpha&space;&plus;&space;1}&space;\right))
+
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
 As is done in the code, it is natural to reparameterise as below:
 
-![](https://latex.codecogs.com/svg.image?%5Crho%26space%3B%3D%26space%3B%5Cfrac%7B%5Czeta%7D%7B%5Csqrt%7B%5Czeta%5E2%26space%3B%26plus%3B%26space%3B%5Clambda%5E2%7D%7D%2C%26space%3B%5Cphantom%7Bxx%7D%26space%3B%5Ceta%26space%3B%3D%26space%3B%5Csqrt%7B%5Czeta%5E2%26space%3B%26plus%3B%26space%3B%5Clambda%5E2%7D.)
+![](https://latex.codecogs.com/svg.image?\rho&space;=&space;\frac{\zeta}{\sqrt{\zeta^2&space;&plus;&space;\lambda^2}},&space;\phantom{xx}&space;\eta&space;=&space;\sqrt{\zeta^2&space;&plus;&space;\lambda^2}.)
 
 ## What the code contains
 The code first and foremost implements pricing algorithms for puts and calls on S(t). You should consult the code or the paper for a description of **what** methods and schemes are used. This part of the project is only implemented in Matlab.
