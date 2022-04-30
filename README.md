@@ -12,11 +12,9 @@ The models for V(t) that we consider are defined below.
 **Remark:** The notation differs slightly between the paper and the code. Keep this in mind.
 
 ### Heston
-The Heston model of [2] assumes
+In the Heston model of [2], we have
 
 ![](https://latex.codecogs.com/svg.image?dV_t&space;=&space;\kappa(v_{\infty}-V_t)dt&space;&plus;&space;\eta&space;\sqrt{V_t}dW_{1,t})
-
-where 
 
 ![](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Ckappa%2C%5Ceta%2Cv_%7B%5Cinfty%7D%2CV_0%26space%3B%5Cgeq%26space%3B0%2C%26space%3B%5Ctext%7B%26space%3Band%26space%3B%7D%26space%3BdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%3D%26space%3B%5Crho%26space%3Bdt%2C%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D)
 
