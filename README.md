@@ -1,5 +1,5 @@
 # Implementation of rough volatility models
-This project implements the pricing models that is used in part one of the analysis of [1] as well as fast neural network approximations of these.
+This project implements the pricing models used in part one of the analysis of [1] as well as fast neural network approximations of these.
 
 We start by outlining the models: Let S(t) denote the time t price of an asset and let r(t) and q(t) denote the risk-free interest rate and the continuously compounded dividend yield respectively; r(t) and q(t) are assumed deterministic. Under some standard assumptions we then have 
 
@@ -14,11 +14,11 @@ The models for V(t) that we consider are defined below.
 ### Heston
 The Heston model of [2] assumes
 
-
+![](https://latex.codecogs.com/svg.image?dV_t&space;=&space;\kappa(v_{\infty}-V_t)dt&space;&plus;&space;\eta&space;\sqrt{V_t}dW_{1,t})
 
 where 
 
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/image1.png)
+![](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Ckappa%2C%5Ceta%2Cv_%7B%5Cinfty%7D%2CV_0%26space%3B%5Cgeq%26space%3B0%2C%26space%3B%5Ctext%7B%26space%3Band%26space%3B%7D%26space%3BdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%3D%26space%3B%5Crho%26space%3Bdt%2C%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D)
 
 ### Rough Heston
 The rough Heston model of [3] assumes
