@@ -7,7 +7,7 @@ We start by outlining the models: Let S(t) denote the time t price of an asset a
 
 under the risk-neutral measure. Here V(t) is some process (the instantaneous variance) and we write W for Brownian motions.
 
-The different models for V(t) are defined below.
+The models for V(t) that we consider are defined below.
 
 **Remark:** The notation differs slightly between the paper and the code. Keep this in mind.
 
