@@ -3,7 +3,7 @@ This project implements the pricing models that is used in part one of the analy
 
 We start by outlining the models: Let S(t) denote the time t price of an asset and let r(t) and q(t) denote the risk-free interest rate and the continuously compounded dividend yield respectively; r(t) and q(t) are assumed deterministic. Under some standard assumptions we then have 
 
-![dS_eqn](http://www.sciweavers.org/tex2img.php?eq=dS_t%20%3D%20S_t%28r%28t%29-q%28t%29%29dt%20%2B%20S_t%20%5Csqrt%7BV_t%7DdW_%7B2%2Ct%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![dS_eqn](https://latex.codecogs.com/svg.image?dS_t&space;=&space;S_t(r(t)-q(t))dt&space;&plus;&space;S_t&space;\sqrt{V_t}dW_{2,t})
 
 under the risk-neutral measure. Here V(t) is some process (the instantaneous variance) and we write W for Brownian motions.
 
@@ -71,9 +71,7 @@ With neural networks we can compute an entire volatility surface in around 1 mil
 
 The networks are also highly accurate as exemplified with the rough Bergomi model below:
 
-
 ![Explot](get_started/neural_networks_in_matlab/example_plot.jpg?raw=true "Title")
-
 
 The parameters are: 
 
@@ -107,4 +105,4 @@ The following external packages and libraries are included in the project:
 - Adi Navve (2020). Pack & Unpack variables to & from structures with enhanced functionality (https://www.mathworks.com/matlabcentral/fileexchange/31532-pack-unpack-variables-to-from-structures-with-enhanced-functionality), MATLAB Central File Exchange. Retrieved March 16, 2020.
 
 ## Other remarks:
-- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the *HybridScheme.m* file of this project. The two implementations are equivalent up to round-off error but that of the current project is easier to read.
+- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J) in place of the *HybridScheme.m* file of this project. The only difference between the files is the FFT implementation, which has been made more readable in the current project. The two implementations are equivalent up to round-off error.
