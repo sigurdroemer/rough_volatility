@@ -25,6 +25,8 @@ We consider also a rough Heston model akin to [3] defined by
 
 ![](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Cnu%26space%3B%5Cgeq%26space%3B0%2C%26space%3B%5Cphantom%7Bx%7DH%26space%3B%5Cin%26space%3B%280%2C1%2F2%29%2C%26space%3B%5Cphantom%7Bx%7D%26space%3BdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%5Ctext%7B%26space%3Bfor%26space%3B%7D%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D%2C%26space%3B%5Ctext%7B%26space%3Band%26space%3B%7D%26space%3B%5Cxi_0%26space%3B%5Ctext%7B%26space%3Bis%26space%3Bof%26space%3Bthe%26space%3Bform%26space%3B%7D)
 
+![rHeston](https://latex.codecogs.com/svg.image?\xi_0(t)&space;=&space;V_0&space;&plus;&space;\frac{1}{\Gamma(H&plus;\frac{1}{2})}\int_0^t&space;(t-s)^{H-\frac{1}{2}}&space;\theta(s)&space;ds,&space;\phantom{xx}&space;t&space;\geq&space;0,)
+
 ### Rough Bergomi
 The rough Bergomi model of [4] assumes
 
