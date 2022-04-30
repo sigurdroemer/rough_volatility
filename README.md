@@ -11,7 +11,7 @@ In this project we then consider the (risk-neutral) models for V(t) described be
 ### Heston
 The Heston model of [2] assumes
 
-![heston](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/heston_2.png)
+![heston](http://www.sciweavers.org/tex2img.php?eq=dS_t%20%3D%20S_t%28r%28t%29-q%28t%29%29dt%20%2B%20S_t%20%5Csqrt%7BV_t%7DdW_%7B2%2Ct%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 where 
 
