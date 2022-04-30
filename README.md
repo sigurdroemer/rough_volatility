@@ -34,28 +34,19 @@ The rough Bergomi model of [4] assumes
 
 ![rBergomi](https://latex.codecogs.com/svg.image?V_t&space;=&space;\xi_0(t)\exp&space;\left(&space;&space;\eta&space;\sqrt{2H}&space;\int_0^t&space;(t-s)^{H-\frac{1}{2}}dW_{1,s}&space;-&space;\frac{\eta^2}{2}&space;t^{2H}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
-where
-
 ![](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\eta&space;\geq&space;0,&space;H&space;\in&space;(0,1/2),&space;dW_{1,t}dW_{2,t}&space;=&space;\rho&space;dt,&space;\rho&space;\in&space;[-1,1].)
 
 ### Extended rough Bergomi
 The extended rough Bergomi model assumes
 
-![rBergomiExt](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/rbergomi_ext_def.png)
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_t&space;=&space;\xi_0(t)V_{1,t}V_{2,t})
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_{1,t}&space;=&space;\exp&space;\left(\zeta&space;\sqrt{2&space;\alpha&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\alpha}&space;dW_{2,s}&space;-&space;\frac{\zeta^2}{2}t^{2&space;\alpha&space;&plus;&space;1}&space;\right))
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
-where
 
-![rBergomiExtFactors](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/rbergomi_ext_vfactors.png)
+As is done in the code, it is natural to reparameterise as below:
 
-and
-
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/image4.png)
-
-It is however natural to reexpress it in terms of the following parameters:
-
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/rho_eta_rbergomi_ext.png)
-
-This is also the parameterization used in the code.
+![](https://latex.codecogs.com/svg.image?%5Crho%26space%3B%3D%26space%3B%5Cfrac%7B%5Czeta%7D%7B%5Csqrt%7B%5Czeta%5E2%26space%3B%26plus%3B%26space%3B%5Clambda%5E2%7D%7D%2C%26space%3B%5Cphantom%7Bxx%7D%26space%3B%5Ceta%26space%3B%3D%26space%3B%5Csqrt%7B%5Czeta%5E2%26space%3B%26plus%3B%26space%3B%5Clambda%5E2%7D.)
 
 ## What the code contains
 The code first and foremost implements pricing algorithms for puts and calls on S(t). You should consult the code or the paper for a description of **what** methods and schemes are used. This part of the project is only implemented in Matlab.
