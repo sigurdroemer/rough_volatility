@@ -3,7 +3,7 @@ This project implements the stochastic volatility models used in [1] as well as 
 
 Let us start by explaining the models we work with. Let therefore S(t) denote the time t price of some (underlying) asset and let r(t) and q(t) denote the risk-free interest rate and the dividend yield respectively (both assumed deterministic functions of time). Under some standard assumptions we then have
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} + \int_0^t K(t-s)ds = -1">
 
 
 under the risk-neutral measure. Here V(t) is the instantaneous variance process and we let W's denote Brownian motions.
