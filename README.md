@@ -71,7 +71,9 @@ With neural networks we can compute an entire volatility surface in around 1 mil
 
 The networks are also highly accurate as exemplified with the rough Bergomi model below:
 
-![](https://github.com/sigurdroemer/rough_volatility/get_started/neural_networks_in_matlab/example_plot.jpg)
+
+![Explot](rough_volatility/get_started/neural_networks_in_matlab/example_plot.jpg?raw=true "Title")
+
 
 The parameters are: 
 
