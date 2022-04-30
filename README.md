@@ -23,9 +23,7 @@ We consider also a rough Heston model akin to [3] defined by
 
 ![rHeston](https://latex.codecogs.com/svg.image?V_t%26space%3B%3D%26space%3B%5Cxi_0%28t%29%26space%3B%26plus%3B%26space%3B%5Cfrac%7B%5Cnu%7D%7B%5CGamma%28H%26plus%3B%5Cfrac%7B1%7D%7B2%7D%29%7D%5Cint_0%5Et%26space%3B%28t-s%29%5E%7BH-%5Cfrac%7B1%7D%7B2%7D%7D%5Csqrt%7BV_s%7DdW_%7B1%2Cs%7D%2C%26space%3B%5Cphantom%7Bxx%7D%26space%3Bt%26space%3B%5Cgeq%26space%3B0%2C)
 
-where
-
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/image2.png)
+![](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Cnu%26space%3B%5Cgeq%26space%3B0%2C%26space%3B%5Cphantom%7Bx%7DH%26space%3B%5Cin%26space%3B%280%2C1%2F2%29%2C%26space%3B%5Cphantom%7Bx%7D%26space%3BdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%5Ctext%7B%26space%3Bfor%26space%3B%7D%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D%2C%26space%3B%5Ctext%7B%26space%3Band%26space%3B%7D%26space%3B%5Cxi_0%26space%3B%5Ctext%7B%26space%3Bis%26space%3Bof%26space%3Bthe%26space%3Bform%26space%3B%7D)
 
 ### Rough Bergomi
 The rough Bergomi model of [4] assumes
