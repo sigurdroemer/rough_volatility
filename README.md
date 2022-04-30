@@ -71,11 +71,11 @@ With neural networks we can compute an entire volatility surface in around 1 mil
 
 The networks are also highly accurate as exemplified with the rough Bergomi model below:
 
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/example_plot.jpg)
+![](https://github.com/sigurdroemer/rough_volatility/get_started/neural_networks_in_matlab/example_plot.jpg)
 
 The parameters are: 
 
-![](https://github.com/sigurdroemer/rough_volatility/blob/readme_images/parameters.JPG)
+![](http://www.sciweavers.org/tex2img.php?eq=H%20%3D%200.1%2C%20%5Ceta%20%3D%202.1%2C%20%5Crho%20%3D%20-0.9%2C%20%5Cxi_0%28t%29%20%3D%200.15%5E2.&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 A more detailed analysis of the approximation error can be found in the paper.
 
@@ -105,4 +105,4 @@ The following external packages and libraries are included in the project:
 - Adi Navve (2020). Pack & Unpack variables to & from structures with enhanced functionality (https://www.mathworks.com/matlabcentral/fileexchange/31532-pack-unpack-variables-to-from-structures-with-enhanced-functionality), MATLAB Central File Exchange. Retrieved March 16, 2020.
 
 ## Other remarks:
-- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the * *HybridScheme.m* * file of this project. The two implementations are equivalent up to round-off error but that of the current project is easier to read.
+- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J)  in place of the *HybridScheme.m* file of this project. The two implementations are equivalent up to round-off error but that of the current project is easier to read.
