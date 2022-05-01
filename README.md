@@ -45,7 +45,7 @@ The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
-![rBergomiExt](https://latex.codecogs.com/svg.image?%5Ctext%7Bwhere%26space%3B%7D%26space%3B%5Cxi_0%3A%5Cmathbb%7BR%7D_%26plus%3B%26space%3B%5Crightarrow%26space%3B%5Cmathbb%7BR%7D_%26plus%3B%2C%26space%3B%26space%3B%5Czeta%2C%26space%3B%5Clambda%26space%3B%5Cin%26space%3B%5Cmathbb%7BR%7D%2C%26space%3B%5Calpha%2C%26space%3B%5Cbeta%26space%3B%5Cin%26space%3B%28-1%2F2%2C0%29%2C%26space%3B%5C%5C%5Cphantom%7Bxxx%7DdW_%7B1%2Ct%7DdW_%7B2%2Ct%7D%26space%3B%3D%26space%3B%5Crho%26space%3Bdt%2C%26space%3B%5Crho%26space%3B%5Cin%26space%3B%5B-1%2C1%5D.)
+![rBergomiExt](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\zeta,&space;\lambda&space;\in&space;\mathbb{R},&space;\alpha,&space;\beta&space;\in&space;(-1/2,0),&space;(W_{1,t})_{t&space;\geq&space;0}&space;\text{&space;and&space;}&space;(W_{2,t})_{t&space;\geq&space;0}&space;\text{&space;are&space;\textbf{independent}}.)
 
 In the code, we use the reparameterisation:
 
