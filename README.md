@@ -41,7 +41,7 @@ The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?V_t&space;=&space;\xi_0(t)V_{1,t}V_{2,t})
 
-![rBergomiExt](https://latex.codecogs.com/svg.image?V_{1,t}&space;=&space;\exp&space;\left(\zeta&space;\sqrt{2&space;\alpha&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\alpha}&space;dW_{2,s}&space;-&space;\frac{\zeta^2}{2}t^{2&space;\alpha&space;&plus;&space;1}&space;\right))
+![rBergomiExt](https://latex.codecogs.com/svg.image?V_{1,t}&space;=&space;\exp&space;\left(\zeta&space;\sqrt{2&space;\alpha&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\alpha}dW_{1,s}&space;-&space;\frac{\zeta^2}{2}t^{2&space;\alpha&space;&plus;&space;1}&space;\right))
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?V_{2,t}&space;=&space;\exp&space;\left(\lambda&space;\sqrt{2&space;\beta&space;&plus;&space;1}&space;\int_0^t&space;(t-s)^{\beta}&space;dW_{2,s}&space;-&space;\frac{\lambda^2}{2}t^{2&space;\beta&space;&plus;&space;1}&space;\right),&space;\phantom{xx}&space;t&space;\geq&space;0,)
 
