@@ -49,7 +49,7 @@ The extended rough Bergomi model assumes
 
 In the code, we use the reparameterisation:
 
-![](https://latex.codecogs.com/svg.image?\rho&space;=&space;\frac{\zeta}{\sqrt{\zeta^2&space;&plus;&space;\lambda^2}},&space;\phantom{xx}&space;\eta&space;=&space;\sqrt{\zeta^2&space;&plus;&space;\lambda^2}.)
+![](https://latex.codecogs.com/svg.image?\rho&space;=&space;\frac{\lambda}{\sqrt{\zeta^2&space;&plus;&space;\lambda^2}},&space;\phantom{xx}&space;\eta&space;=&space;\sqrt{\zeta^2&space;&plus;&space;\lambda^2})
 
 ## What the code contains
 The code first and foremost implements pricing algorithms for puts and calls on S(t). You should consult the code or the paper for a description of **what** methods and schemes are used. This part of the project is only implemented in Matlab.
