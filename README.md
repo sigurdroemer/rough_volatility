@@ -47,7 +47,9 @@ The extended rough Bergomi model assumes
 
 ![rBergomiExt](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\zeta,&space;\lambda&space;\in&space;\mathbb{R},&space;\alpha,&space;\beta&space;\in&space;(-1/2,0),&space;(W_{1,t})_{t&space;\geq&space;0}&space;\text{&space;and&space;}&space;(W_{2,t})_{t&space;\geq&space;0}&space;\text{&space;are&space;\textbf{independent}}.)
 
-![rBergomiExt]([https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\zeta,&space;\lambda&space;\in&space;\mathbb{R},&space;\alpha,&space;\beta&space;\in&space;(-1/2,0),&space;(W_{1,t})_{t&space;\geq&space;0}&space;\text{&space;and&space;}&space;(W_{2,t})_{t&space;\geq&space;0}&space;\text{&space;are&space;\textbf{independent}}](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\zeta,\lambda&space;\in&space;\mathbb{R},&space;\alpha,\beta&space;\in&space;(-1/2,1/2),&space;(W_{1,t})_{t&space;\geq&space;0}&space;\text{&space;and&space;}&space;(W_{2,t})_{t&space;\geq&space;0}&space;\text{&space;are&space;\textbf{independent}.}).)
+![rBergomiExt](https://latex.codecogs.com/svg.image?\text{where&space;}&space;\xi_0:\mathbb{R}_&plus;&space;\rightarrow&space;\mathbb{R}_&plus;,&space;\zeta,\lambda&space;\in&space;\mathbb{R},&space;\alpha,\beta&space;\in&space;(-1/2,1/2),&space;(W_{1,t})_{t&space;\geq&space;0}&space;\text{&space;and&space;}&space;(W_{2,t})_{t&space;\geq&space;0}&space;\text{&space;are&space;\textbf{independent}.})
+
+
 
 
 
