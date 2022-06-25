@@ -88,7 +88,8 @@ Remarks:
 - Only the Matlab version of the neural network implementations have been optimised for speed. Thus this is the recommended version (although they are all fast).
 
 ## Main references
-1. Rømer, S.E., Empirical analysis of rough and classical stochastic volatility models to the SPX and VIX markets, 2022, to be published soon.
+1. Rømer, S.E., Empirical analysis of rough and classical stochastic volatility models to the SPX and VIX markets, 2022, Quantitative Finance, DOI:
+10.1080/14697688.2022.2081592.
 2. Heston, S. L., A closed-form solution for options with stochastic volatility with applications to bond and currency options. Review of Financial Studies 6, 1993, pp. 327–343.
 3. El Euch, O., Gatheral, J., and Rosenbaum, M., Roughening Heston. Risk, May 2019, pp. 84-89.
 4. Bayer, C., Friz, P., and Gatheral, J., Pricing under rough volatility. Quantitative Finance, 2016, 16(6), pp. 887-904.
