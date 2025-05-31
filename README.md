@@ -58,7 +58,7 @@ Secondly, there are Matlab scripts for generating large datasets of option price
 
 Thirdly, the code implements interfaces to evaluate the neural networks. The interfaces are available in Matlab, Python and R. 
 
-The network weights are located in the folder *.../code/neural_networks/data/neural_network_weights* if one wants to implement the neural networks in other languages. The training and test datasets are rather large (almost 30 GB in total) and can thus instead be downloaded from [here](https://drive.google.com/open?id=1dmWpm8d5l6yrYyv2twcHMnMmh5B1QaP_). To use the datasets in the project, place the files in the folder *".../code/neural_networks/data/training_and_test_data".
+The network weights are located in the folder *.../code/neural_networks/data/neural_network_weights* if one wants to implement the neural networks in other languages. The training and test datasets are rather large (almost 30 GB in total) and are thus not included in the repository. They can instead be provided upon request.
 
 ### Speed and accuracy
 With neural networks we can compute an entire volatility surface in around 1 millisecond on a standard laptop. A typical calibration to SPX options can then be performed in less than a second. Read the paper for the details, or try it yourself.
@@ -100,4 +100,4 @@ The following external packages and libraries are included in the project:
 - Adi Navve (2020). Pack & Unpack variables to & from structures with enhanced functionality (https://www.mathworks.com/matlabcentral/fileexchange/31532-pack-unpack-variables-to-from-structures-with-enhanced-functionality), MATLAB Central File Exchange. Retrieved March 16, 2020.
 
 ## Other remarks:
-- The neural network datasets for the rough Bergomi models are computed with [this file](https://drive.google.com/drive/folders/1QRv71nhHvZ_rB0kPjO3cHpFOE3GVHn9J) in place of the *HybridScheme.m* file of this project. The only difference between the files is the FFT implementation, which has been made more readable in the current project. The two implementations are equivalent up to round-off error.
+- The neural network datasets for the rough Bergomi models are computed with a slightly different file than the *HybridScheme.m* file of this project. The only difference between the files is the FFT implementation, which has been made more readable in the current project. The two implementations are equivalent up to round-off error. The original file can be provided upon request.
